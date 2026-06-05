@@ -464,8 +464,9 @@
 
 .sum-area {
   width: 100%;
-  min-height: 120px;
+  height: 120px;
   margin-bottom: 12px;
+  overflow-y: auto;
   border: 1.5px solid #edd9c6;
   border-radius: 8px;
   background: #fff;
@@ -473,7 +474,7 @@
   font-family: inherit;
   font-size: 14px;
   padding: 11px 13px;
-  resize: vertical;
+  resize: none;
 }
 
 .sum-area:focus {
@@ -535,7 +536,8 @@
 }
 
 .det-sum {
-  min-height: 72px;
+  height: 160px;
+  overflow-y: auto;
   border-radius: 12px;
   background: #fff;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
@@ -777,7 +779,7 @@
   }
 
   .sum-area {
-    min-height: 180px;
+    height: clamp(150px, calc(100svh - 520px), 260px);
     border-radius: 10px;
     font-size: 16px;
     padding: 16px;
@@ -799,7 +801,7 @@
   }
 
   .det-sum {
-    min-height: 140px;
+    height: clamp(160px, calc(100svh - 430px), 320px);
     border-radius: 14px;
     font-size: 17px;
     padding: 22px;
