@@ -84,7 +84,9 @@
 .back-btn:focus-visible,
 .sec-more:focus-visible,
 .rec-card:focus-visible,
-.av-card:focus-visible {
+.av-card:focus-visible,
+.page-btn:focus-visible,
+.page-num:focus-visible {
   outline: 3px solid rgba(232, 112, 34, 0.28);
   outline-offset: 2px;
 }
@@ -215,6 +217,50 @@
   color: #e87022;
   font-size: 12px;
   white-space: nowrap;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.page-numbers {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  max-width: min(100%, 360px);
+  overflow-x: auto;
+  padding: 2px;
+}
+
+.page-btn,
+.page-num {
+  min-width: 34px;
+  height: 32px;
+  border: 1px solid #edd9c6;
+  border-radius: 999px;
+  background: #fff;
+  color: #8c6a50;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 0 11px;
+}
+
+.page-num.active {
+  border-color: #e87022;
+  background: #e87022;
+  color: #fff;
+}
+
+.page-btn:disabled {
+  cursor: default;
+  opacity: 0.45;
 }
 
 .empty {
