@@ -61,6 +61,7 @@ function App() {
     const trimmedTopic = topic.trim();
 
     if (!trimmedTopic) {
+      window.alert('학습 주제를 입력해주세요.');
       document.getElementById('topic-input')?.focus();
       return;
     }
