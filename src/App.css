@@ -143,6 +143,7 @@
 .rec-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-content: start;
   gap: 12px;
 }
 
@@ -155,7 +156,7 @@
   color: inherit;
   cursor: pointer;
   font-family: inherit;
-  padding: 12px;
+  padding: 11px;
   text-align: left;
 }
 
@@ -169,7 +170,7 @@
   align-items: flex-start;
   justify-content: space-between;
   gap: 8px;
-  margin-bottom: 8px;
+  margin-bottom: 7px;
 }
 
 .rec-copy {
@@ -689,6 +690,7 @@
 
   .rec-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-rows: minmax(112px, auto);
     gap: 18px;
   }
 
@@ -700,37 +702,37 @@
   }
 
   .rec-card {
-    min-height: 142px;
+    min-height: 112px;
     border-radius: 12px;
-    padding: 17px;
+    padding: 14px;
   }
 
   .rec-top {
-    gap: 16px;
-    margin-bottom: 18px;
+    gap: 12px;
+    margin-bottom: 12px;
   }
 
   .rec-date {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .rec-topic {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .rec-avatar {
-    width: 72px;
-    height: 72px;
-    border-radius: 13px;
+    width: 54px;
+    height: 54px;
+    border-radius: 11px;
   }
 
   .rec-time {
-    font-size: 14px;
-    padding: 5px 12px;
+    font-size: 13px;
+    padding: 4px 11px;
   }
 
   .rec-link {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .empty {
