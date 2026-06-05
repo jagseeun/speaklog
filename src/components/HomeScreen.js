@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 import RecordGrid from './RecordGrid';
 
 function HomeScreen({ records, onRecords, onSelectRecord, onStart }) {
-  const recentRecords = useMemo(() => records.slice().reverse().slice(0, 4), [records]);
+  const recentRecords = useMemo(() => records.slice().reverse().slice(0, 3), [records]);
 
   return (
     <section className="screen home-screen" aria-labelledby="home-title">
