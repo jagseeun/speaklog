@@ -628,6 +628,10 @@
     padding-bottom: 24px;
   }
 
+  .home-screen > .btn {
+    align-self: flex-start;
+  }
+
   .records-screen,
   .detail-screen,
   .summary-screen,
