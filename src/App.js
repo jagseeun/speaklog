@@ -78,13 +78,21 @@ function App() {
   };
 
   const saveRecord = () => {
+    const trimmedSummary = summary.trim();
+
+    if (!trimmedSummary) {
+      window.alert('핵심 내용을 작성해주세요.');
+      document.getElementById('summary-input')?.focus();
+      return;
+    }
+
     const record = {
       id: String(Date.now()),
       date: makeRecordDate(),
       topic: currentTopic,
       avatar: selectedAvatar,
       duration: elapsed,
-      summary: summary.trim(),
+      summary: trimmedSummary,
     };
 
     setRecords((items) => [...items, record]);
