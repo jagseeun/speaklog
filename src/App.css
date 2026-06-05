@@ -47,7 +47,7 @@
 }
 
 .logo-text {
-  color: #2b1a0e;
+  color: #715135;
   font-size: 16px;
   font-weight: 700;
 }
@@ -619,6 +619,13 @@
     flex: 1;
     min-height: 0;
     overflow: hidden;
+  }
+
+  .home-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 24px;
   }
 
   .records-screen,
