@@ -4,24 +4,34 @@
   box-sizing: border-box;
 }
 
+:root {
+  --content-width: 520px;
+  --content-width-wide: 960px;
+  --line: #edd9c6;
+  --surface-line: #f1dfcf;
+  --text-main: #2b1a0e;
+  --text-muted: #8c6a50;
+  --brand: #e87022;
+}
+
 .app {
   min-height: 100svh;
   padding: 18px;
   background: #fdf6ee;
-  color: #2b1a0e;
+  color: var(--text-main);
   font-family: 'Noto Sans KR', 'Segoe UI', sans-serif;
 }
 
 .screen {
-  width: min(100%, 520px);
+  width: min(100%, var(--content-width));
 }
 
 .logo {
   display: flex;
   align-items: center;
   gap: 9px;
-  width: min(100%, 520px);
-  margin-bottom: 14px;
+  width: min(100%, var(--content-width));
+  margin-bottom: 12px;
   border: none;
   background: transparent;
   cursor: pointer;
@@ -53,10 +63,10 @@
 }
 
 .divider {
-  width: min(100%, 520px);
+  width: min(100%, var(--content-width));
   height: 1px;
-  margin-bottom: 14px;
-  background: #edd9c6;
+  margin-bottom: 18px;
+  background: var(--line);
 }
 
 .btn {
@@ -98,14 +108,14 @@
 }
 
 .hero-text {
-  margin: 0 0 5px;
-  color: #8c6a50;
+  margin: 0 0 6px;
+  color: var(--text-muted);
   font-size: 13px;
 }
 
 .hero-head {
-  margin: 0 0 14px;
-  color: #2b1a0e;
+  margin: 0 0 16px;
+  color: var(--text-main);
   font-size: 16px;
   font-weight: 700;
   line-height: 1.5;
@@ -120,7 +130,11 @@
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  margin: 18px 0 12px;
+  margin: 22px 0 12px;
+}
+
+.home-screen .sec-row {
+  margin-top: 28px;
 }
 
 .sec-label {
@@ -273,15 +287,15 @@
 }
 
 .page-title {
-  margin: 0 0 3px;
-  color: #2b1a0e;
+  margin: 0 0 4px;
+  color: var(--text-main);
   font-size: 19px;
   font-weight: 700;
 }
 
 .page-sub {
-  margin: 0 0 18px;
-  color: #8c6a50;
+  margin: 0 0 22px;
+  color: var(--text-muted);
   font-size: 13px;
 }
 
@@ -295,8 +309,8 @@
 
 .f-input {
   width: 100%;
-  margin-bottom: 18px;
-  border: 1px solid #edd9c6;
+  margin-bottom: 22px;
+  border: 1px solid var(--line);
   border-radius: 8px;
   background: #fff;
   color: #2b1a0e;
@@ -318,7 +332,7 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 10px;
-  margin-bottom: 18px;
+  margin-bottom: 22px;
 }
 
 .av-card {
@@ -483,8 +497,8 @@
 
 .stat-row {
   display: flex;
-  gap: 10px;
-  margin-bottom: 16px;
+  gap: 12px;
+  margin-bottom: 18px;
 }
 
 .stat-box {
@@ -613,7 +627,7 @@
   .screen,
   .logo,
   .divider {
-    width: min(100%, 1040px);
+    width: min(100%, var(--content-width-wide));
   }
 
   .screen {
@@ -626,7 +640,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-bottom: 24px;
   }
 
   .home-screen > .btn {
@@ -639,6 +652,11 @@
   .session-screen {
     display: flex;
     flex-direction: column;
+    padding-top: 22px;
+  }
+
+  .setup-screen {
+    padding-top: 22px;
   }
 
   .logo {
@@ -656,7 +674,7 @@
   }
 
   .divider {
-    margin-bottom: 20px;
+    margin-bottom: 0;
   }
 
   .hero-text {
@@ -676,7 +694,7 @@
   }
 
   .sec-row {
-    margin: 30px 0 16px;
+    margin: 28px 0 14px;
   }
 
   .sec-label {
@@ -745,12 +763,12 @@
   }
 
   .page-sub {
-    margin-bottom: 28px;
+    margin-bottom: 24px;
     font-size: 16px;
   }
 
   .back-btn {
-    margin-bottom: 22px;
+    margin-bottom: 18px;
     font-size: 15px;
   }
 
