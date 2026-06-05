@@ -5,7 +5,7 @@
 }
 
 .app {
-  min-height: 100vh;
+  min-height: 100svh;
   padding: 18px;
   background: #fdf6ee;
   color: #2b1a0e;
@@ -340,10 +340,6 @@
   background: #efe0d0;
 }
 
-.audience-video.is-preview {
-  filter: saturate(0.92);
-}
-
 .audience-fallback {
   display: inline-flex;
   align-items: center;
@@ -365,7 +361,6 @@
 .session-video {
   width: min(76%, 300px);
   height: 156px;
-  animation: breathe 3s ease-in-out infinite;
   border-radius: 14px;
 }
 
@@ -389,17 +384,9 @@
 .dot {
   width: 7px;
   height: 7px;
-  animation: blink 1.2s ease-in-out infinite;
   border-radius: 50%;
   background: #e87022;
-}
-
-.dot:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.dot:nth-child(3) {
-  animation-delay: 0.4s;
+  opacity: 0.65;
 }
 
 .hint {
@@ -555,34 +542,12 @@
   white-space: pre-wrap;
 }
 
-@keyframes breathe {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.06);
-  }
-}
-
-@keyframes blink {
-  0%,
-  100% {
-    opacity: 0.3;
-  }
-
-  50% {
-    opacity: 1;
-  }
-}
-
 @media (min-width: 768px) {
   .app {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 36px 32px 56px;
+    padding: 24px 32px 32px;
   }
 
   .screen,
@@ -612,7 +577,7 @@
   }
 
   .divider {
-    margin-bottom: 28px;
+    margin-bottom: 20px;
   }
 
   .hero-text {
@@ -735,7 +700,7 @@
   }
 
   .sess-top {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
 
   .topic-pill {
@@ -750,20 +715,20 @@
   }
 
   .av-stage {
-    height: 540px;
-    margin-bottom: 20px;
+    height: clamp(300px, calc(100svh - 260px), 460px);
+    margin-bottom: 14px;
     border-radius: 18px;
   }
 
   .session-video {
-    width: min(82%, 780px);
-    height: 420px;
+    width: min(78%, 700px);
+    height: calc(100% - 42px);
     border-radius: 18px;
   }
 
   .dots {
     gap: 8px;
-    margin-top: 18px;
+    margin-top: 14px;
   }
 
   .dot {
@@ -772,7 +737,7 @@
   }
 
   .hint {
-    margin-bottom: 22px;
+    margin-bottom: 18px;
     font-size: 16px;
   }
 

@@ -12,7 +12,7 @@ function SessionScreen({ elapsed, selectedAvatar, topic, onFinish }) {
         <span className="timer-pill">{formatDuration(elapsed)}</span>
       </div>
       <div className="av-stage">
-        <AudienceVideo audience={avatar} className="session-video" playing />
+        <AudienceVideo audience={avatar} className="session-video" />
         <div className="dots" aria-hidden="true">
           <div className="dot" />
           <div className="dot" />
