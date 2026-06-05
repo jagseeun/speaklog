@@ -90,6 +90,7 @@ function App() {
     setRecords((items) => [...items, record]);
     setTopic('');
     setSummary('');
+    window.alert('기록이 완료되었습니다.');
     setScreen('home');
   };
 
@@ -131,7 +132,6 @@ function App() {
           elapsed={elapsed}
           summary={summary}
           topic={currentTopic}
-          onBackHome={goHome}
           onSave={saveRecord}
           onSummaryChange={setSummary}
         />

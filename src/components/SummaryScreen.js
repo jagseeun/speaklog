@@ -1,6 +1,6 @@
 import { formatDuration } from '../utils/format';
 
-function SummaryScreen({ elapsed, summary, topic, onBackHome, onSave, onSummaryChange }) {
+function SummaryScreen({ elapsed, summary, topic, onSave, onSummaryChange }) {
   return (
     <section className="screen summary-screen" aria-labelledby="summary-title">
       <div className="done-wrap">
@@ -33,9 +33,6 @@ function SummaryScreen({ elapsed, summary, topic, onBackHome, onSave, onSummaryC
         value={summary}
       />
       <div className="summary-actions">
-        <button className="back-btn no-margin" type="button" onClick={onBackHome}>
-          ← 홈으로
-        </button>
         <button className="btn" type="button" onClick={onSave}>
           <span aria-hidden="true">✓</span>
           작성 완료
