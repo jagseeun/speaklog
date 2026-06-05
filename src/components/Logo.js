@@ -1,7 +1,7 @@
-function Logo() {
+function Logo({ onHome }) {
   return (
     <>
-      <div className="logo">
+      <button className="logo" type="button" onClick={onHome} aria-label="Speaklog 홈으로 이동">
         <div className="logo-icon" aria-hidden="true">
           <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
             <ellipse cx="10" cy="8" rx="4" ry="5" stroke="white" strokeWidth="2.2" />
@@ -14,7 +14,7 @@ function Logo() {
           </svg>
         </div>
         <span className="logo-text">Speaklog</span>
-      </div>
+      </button>
       <div className="divider" />
     </>
   );

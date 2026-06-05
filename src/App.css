@@ -6,7 +6,7 @@
 
 .app {
   min-height: 100vh;
-  padding: 16px;
+  padding: 18px;
   background: #fdf6ee;
   color: #2b1a0e;
   font-family: 'Noto Sans KR', 'Segoe UI', sans-serif;
@@ -22,6 +22,12 @@
   gap: 8px;
   width: min(100%, 520px);
   margin-bottom: 14px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 0;
+  text-align: left;
 }
 
 .logo-icon {
@@ -69,6 +75,7 @@
 }
 
 .btn:focus-visible,
+.logo:focus-visible,
 .back-btn:focus-visible,
 .sec-more:focus-visible,
 .rec-card:focus-visible,
@@ -333,6 +340,10 @@
   background: #efe0d0;
 }
 
+.audience-video.is-preview {
+  filter: saturate(0.92);
+}
+
 .audience-fallback {
   display: inline-flex;
   align-items: center;
@@ -566,12 +577,268 @@
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   .app {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 28px;
+    padding: 36px 32px 56px;
+  }
+
+  .screen,
+  .logo,
+  .divider {
+    width: min(100%, 1120px);
+  }
+
+  .logo {
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .logo-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 11px;
+  }
+
+  .logo-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .logo-text {
+    font-size: 24px;
+  }
+
+  .divider {
+    margin-bottom: 28px;
+  }
+
+  .hero-text {
+    margin-bottom: 8px;
+    font-size: 17px;
+  }
+
+  .hero-head {
+    margin-bottom: 24px;
+    font-size: 36px;
+    line-height: 1.34;
+  }
+
+  .btn {
+    font-size: 15px;
+    padding: 14px 26px;
+  }
+
+  .sec-row {
+    margin: 34px 0 16px;
+  }
+
+  .sec-label {
+    font-size: 20px;
+  }
+
+  .sec-more,
+  .rec-count {
+    font-size: 15px;
+  }
+
+  .rec-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .rec-card {
+    min-height: 148px;
+    border-radius: 14px;
+    padding: 18px;
+  }
+
+  .rec-top {
+    gap: 16px;
+    margin-bottom: 18px;
+  }
+
+  .rec-date {
+    font-size: 13px;
+  }
+
+  .rec-topic {
+    font-size: 18px;
+  }
+
+  .rec-avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 13px;
+  }
+
+  .rec-time {
+    font-size: 14px;
+    padding: 5px 12px;
+  }
+
+  .rec-link {
+    font-size: 14px;
+  }
+
+  .empty {
+    padding: 70px 0;
+    font-size: 16px;
+  }
+
+  .page-title {
+    font-size: 32px;
+  }
+
+  .page-sub {
+    margin-bottom: 32px;
+    font-size: 16px;
+  }
+
+  .back-btn {
+    margin-bottom: 22px;
+    font-size: 15px;
+  }
+
+  .f-label {
+    margin-bottom: 8px;
+    font-size: 15px;
+  }
+
+  .f-input {
+    margin-bottom: 28px;
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 15px 16px;
+  }
+
+  .av-grid {
+    gap: 18px;
+    margin-bottom: 28px;
+  }
+
+  .av-card {
+    border-radius: 14px;
+    padding: 18px;
+  }
+
+  .av-video {
+    aspect-ratio: 16 / 10;
+    margin-bottom: 12px;
+    border-radius: 12px;
+  }
+
+  .av-name {
+    font-size: 15px;
+  }
+
+  .sess-top {
+    margin-bottom: 20px;
+  }
+
+  .topic-pill {
+    max-width: 72%;
+    font-size: 17px;
+    padding: 9px 18px;
+  }
+
+  .timer-pill {
+    font-size: 22px;
+    padding: 9px 20px;
+  }
+
+  .av-stage {
+    height: 540px;
+    margin-bottom: 20px;
+    border-radius: 18px;
+  }
+
+  .session-video {
+    width: min(82%, 780px);
+    height: 420px;
+    border-radius: 18px;
+  }
+
+  .dots {
+    gap: 8px;
+    margin-top: 18px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .hint {
+    margin-bottom: 22px;
+    font-size: 16px;
+  }
+
+  .done-wrap {
+    margin-bottom: 26px;
+  }
+
+  .done-mark {
+    width: 52px;
+    height: 52px;
+    font-size: 28px;
+  }
+
+  .done-title {
+    font-size: 32px;
+  }
+
+  .done-sub {
+    font-size: 16px;
+  }
+
+  .stat-row {
+    gap: 18px;
+    margin-bottom: 24px;
+  }
+
+  .stat-box {
+    border-radius: 14px;
+    padding: 22px;
+  }
+
+  .stat-v {
+    font-size: 22px;
+  }
+
+  .stat-l {
+    font-size: 14px;
+  }
+
+  .sum-area {
+    min-height: 180px;
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 16px;
+  }
+
+  .detail-video {
+    width: 160px;
+    height: 110px;
+    border-radius: 14px;
+  }
+
+  .det-topic {
+    font-size: 34px;
+  }
+
+  .det-date {
+    margin-bottom: 24px;
+    font-size: 16px;
+  }
+
+  .det-sum {
+    min-height: 140px;
+    border-radius: 14px;
+    font-size: 17px;
+    padding: 22px;
   }
 }
 

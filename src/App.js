@@ -94,7 +94,7 @@ function App() {
 
   return (
     <main className="app">
-      <Logo />
+      <Logo onHome={goHome} />
 
       {screen === 'home' && (
         <HomeScreen
