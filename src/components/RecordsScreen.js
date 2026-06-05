@@ -5,7 +5,7 @@ function RecordsScreen({ records, onBack, onSelectRecord }) {
   const allRecords = useMemo(() => records.slice().reverse(), [records]);
 
   return (
-    <section className="screen" aria-labelledby="records-title">
+    <section className="screen records-screen" aria-labelledby="records-title">
       <button className="back-btn" type="button" onClick={onBack}>
         ← 홈으로
       </button>

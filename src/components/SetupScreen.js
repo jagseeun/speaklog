@@ -17,7 +17,7 @@ function SetupScreen({
   }, []);
 
   return (
-    <section className="screen" aria-labelledby="setup-title">
+    <section className="screen setup-screen" aria-labelledby="setup-title">
       <button className="back-btn" type="button" onClick={onBack}>
         ← 홈으로
       </button>

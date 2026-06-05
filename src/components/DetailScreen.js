@@ -6,7 +6,7 @@ function DetailScreen({ record, onBack }) {
   const avatar = AVATARS[record.avatar] ?? { name: '청중' };
 
   return (
-    <section className="screen" aria-labelledby="detail-title">
+    <section className="screen detail-screen" aria-labelledby="detail-title">
       <button className="back-btn" type="button" onClick={onBack}>
         ← 기록으로
       </button>

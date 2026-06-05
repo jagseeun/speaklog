@@ -2,7 +2,7 @@ import { formatDuration } from '../utils/format';
 
 function SummaryScreen({ elapsed, summary, topic, onBackHome, onSave, onSummaryChange }) {
   return (
-    <section className="screen" aria-labelledby="summary-title">
+    <section className="screen summary-screen" aria-labelledby="summary-title">
       <div className="done-wrap">
         <span className="done-mark" aria-hidden="true">✓</span>
         <h1 className="done-title" id="summary-title">

@@ -6,7 +6,7 @@ function SessionScreen({ elapsed, selectedAvatar, topic, onFinish }) {
   const avatar = AVATARS[selectedAvatar] ?? AVATARS[0];
 
   return (
-    <section className="screen" aria-label="설명 진행">
+    <section className="screen session-screen" aria-label="설명 진행">
       <div className="sess-top">
         <span className="topic-pill">주제 : {topic}</span>
         <span className="timer-pill">{formatDuration(elapsed)}</span>

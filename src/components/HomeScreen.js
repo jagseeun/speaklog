@@ -5,7 +5,7 @@ function HomeScreen({ records, onRecords, onSelectRecord, onStart }) {
   const recentRecords = useMemo(() => records.slice().reverse().slice(0, 4), [records]);
 
   return (
-    <section className="screen" aria-labelledby="home-title">
+    <section className="screen home-screen" aria-labelledby="home-title">
       <p className="hero-text">오늘 배운 내용을 설명하듯 말해보세요.</p>
       <h1 className="hero-head" id="home-title">
         말하고, 정리하고, 기록하며
