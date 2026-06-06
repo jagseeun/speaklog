@@ -73,6 +73,32 @@ test('opens a saved record detail view', () => {
   expect(screen.getByRole('button', { name: /← 기록으로/i })).toBeInTheDocument();
 });
 
+test('shows every saved record from the full records view', () => {
+  const records = Array.from({ length: 7 }, (_, index) => ({
+    id: `record-${index + 1}`,
+    date: '2026.06.06',
+    topic: `학습 기록 ${index + 1}`,
+    avatar: String(index % 3),
+    duration: 60 + index,
+    summary: `요약 ${index + 1}`,
+  }));
+
+  localStorage.setItem('speaklog-v4', JSON.stringify(records));
+
+  render(<App />);
+
+  expect(screen.queryByText('학습 기록 1')).not.toBeInTheDocument();
+
+  fireEvent.click(screen.getByRole('button', { name: /전체 보기/i }));
+
+  expect(screen.getByRole('heading', { name: '학습 기록' })).toBeInTheDocument();
+  expect(screen.getByText('완료된 학습 수 : 7')).toBeInTheDocument();
+  records.forEach((record) => {
+    expect(screen.getByText(record.topic)).toBeInTheDocument();
+  });
+  expect(screen.queryByRole('button', { name: '다음' })).not.toBeInTheDocument();
+});
+
 test('renders the Speaklog home screen', () => {
   render(<App />);
 

@@ -94,9 +94,7 @@
 .back-btn:focus-visible,
 .sec-more:focus-visible,
 .rec-card:focus-visible,
-.av-card:focus-visible,
-.page-btn:focus-visible,
-.page-num:focus-visible {
+.av-card:focus-visible {
   outline: 3px solid rgba(232, 112, 34, 0.28);
   outline-offset: 2px;
 }
@@ -141,6 +139,10 @@
   margin-top: 8px;
 }
 
+.records-screen .rec-grid {
+  grid-template-columns: 1fr;
+}
+
 .detail-screen {
   display: flex;
   flex-direction: column;
@@ -172,11 +174,6 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
   align-content: start;
   gap: 12px;
-}
-
-.records-screen.has-pagination .rec-grid {
-  height: 306px;
-  overflow-y: auto;
 }
 
 .rec-card {
@@ -250,50 +247,6 @@
   color: #e87022;
   font-size: 12px;
   white-space: nowrap;
-}
-
-.pagination {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 14px;
-}
-
-.page-numbers {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  max-width: min(100%, 360px);
-  overflow-x: auto;
-  padding: 2px;
-}
-
-.page-btn,
-.page-num {
-  min-width: 34px;
-  height: 32px;
-  border: 1px solid #edd9c6;
-  border-radius: 999px;
-  background: #fff;
-  color: #8c6a50;
-  cursor: pointer;
-  flex-shrink: 0;
-  font-family: inherit;
-  font-size: 12px;
-  font-weight: 600;
-  padding: 0 11px;
-}
-
-.page-num.active {
-  border-color: #e87022;
-  background: #e87022;
-  color: #fff;
-}
-
-.page-btn:disabled {
-  cursor: default;
-  opacity: 0.45;
 }
 
 .empty {
@@ -683,7 +636,6 @@
   }
 
   .setup-screen > .back-btn,
-  .records-screen > .back-btn,
   .detail-screen > .back-btn {
     position: absolute;
     top: clamp(20px, 3vh, 30px);
@@ -692,7 +644,6 @@
   }
 
   .setup-screen > :nth-child(2),
-  .records-screen > :nth-child(2),
   .detail-screen > :nth-child(2),
   .summary-screen > :first-child,
   .session-screen > :first-child {
@@ -700,7 +651,6 @@
   }
 
   .setup-screen > :last-child,
-  .records-screen > :last-child,
   .detail-screen > :last-child,
   .summary-screen > :last-child,
   .session-screen > :last-child {
@@ -773,15 +723,8 @@
   }
 
   .records-screen .rec-grid {
-    max-height: calc(100% - 150px);
-    overflow-y: auto;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     padding: 2px 4px 4px 0;
-  }
-
-  .records-screen.has-pagination .rec-grid {
-    width: 100%;
-    height: min(248px, calc(100% - 150px));
-    min-height: 112px;
   }
 
   .rec-card {
