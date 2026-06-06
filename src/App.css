@@ -137,6 +137,10 @@
   margin-top: 28px;
 }
 
+.records-screen .sec-row {
+  margin-top: 8px;
+}
+
 .sec-label {
   margin: 0;
   color: #2b1a0e;
@@ -639,6 +643,7 @@
     flex: 1;
     min-height: 0;
     overflow: hidden;
+    padding-block: clamp(20px, 3vh, 30px);
   }
 
   .home-screen,
@@ -665,6 +670,7 @@
   .summary-screen,
   .session-screen {
     overflow-y: auto;
+    scrollbar-gutter: stable;
   }
 
   .setup-screen > :first-child,
@@ -718,7 +724,11 @@
   }
 
   .sec-row {
-    margin: 28px 0 14px;
+    margin: 26px 0 14px;
+  }
+
+  .records-screen .sec-row {
+    margin-top: 8px;
   }
 
   .sec-label {
