@@ -640,6 +640,7 @@
   }
 
   .screen {
+    position: relative;
     flex: 1;
     min-height: 0;
     overflow: hidden;
@@ -673,9 +674,18 @@
     scrollbar-gutter: stable;
   }
 
-  .setup-screen > :first-child,
-  .records-screen > :first-child,
-  .detail-screen > :first-child,
+  .setup-screen > .back-btn,
+  .records-screen > .back-btn,
+  .detail-screen > .back-btn {
+    position: absolute;
+    top: clamp(20px, 3vh, 30px);
+    left: 0;
+    z-index: 1;
+  }
+
+  .setup-screen > :nth-child(2),
+  .records-screen > :nth-child(2),
+  .detail-screen > :nth-child(2),
   .summary-screen > :first-child,
   .session-screen > :first-child {
     margin-top: auto;
