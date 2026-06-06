@@ -141,6 +141,15 @@
   margin-top: 8px;
 }
 
+.detail-screen {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-head {
+  min-width: 0;
+}
+
 .sec-label {
   margin: 0;
   color: #2b1a0e;
@@ -650,7 +659,6 @@
   .home-screen,
   .setup-screen,
   .records-screen,
-  .detail-screen,
   .summary-screen,
   .session-screen {
     display: flex;
@@ -739,6 +747,14 @@
 
   .records-screen .sec-row {
     margin-top: 8px;
+  }
+
+  .detail-screen {
+    justify-content: center;
+  }
+
+  .detail-head {
+    width: 100%;
   }
 
   .sec-label {

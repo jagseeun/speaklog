@@ -48,6 +48,31 @@ test('requires a summary and alerts after saving a record', () => {
   alertSpy.mockRestore();
 });
 
+test('opens a saved record detail view', () => {
+  localStorage.setItem(
+    'speaklog-v4',
+    JSON.stringify([
+      {
+        id: 'record-1',
+        date: '2026.06.06',
+        topic: 'React 상태 관리',
+        avatar: '1',
+        duration: 125,
+        summary: 'setter와 effect의 역할을 구분해서 설명했다.',
+      },
+    ])
+  );
+
+  render(<App />);
+
+  fireEvent.click(screen.getByRole('button', { name: /자세히 보기/i }));
+
+  expect(screen.getByRole('heading', { name: 'React 상태 관리' })).toBeInTheDocument();
+  expect(screen.getByText('02:05')).toBeInTheDocument();
+  expect(screen.getByText('setter와 effect의 역할을 구분해서 설명했다.')).toBeInTheDocument();
+  expect(screen.getByRole('button', { name: /← 기록으로/i })).toBeInTheDocument();
+});
+
 test('renders the Speaklog home screen', () => {
   render(<App />);
 
