@@ -641,9 +641,17 @@
     overflow: hidden;
   }
 
-  .home-screen {
+  .home-screen,
+  .setup-screen,
+  .records-screen,
+  .detail-screen,
+  .summary-screen,
+  .session-screen {
     display: flex;
     flex-direction: column;
+  }
+
+  .home-screen {
     justify-content: center;
   }
 
@@ -651,17 +659,28 @@
     align-self: flex-start;
   }
 
+  .setup-screen,
   .records-screen,
   .detail-screen,
   .summary-screen,
   .session-screen {
-    display: flex;
-    flex-direction: column;
-    padding-top: 22px;
+    overflow-y: auto;
   }
 
-  .setup-screen {
-    padding-top: 22px;
+  .setup-screen > :first-child,
+  .records-screen > :first-child,
+  .detail-screen > :first-child,
+  .summary-screen > :first-child,
+  .session-screen > :first-child {
+    margin-top: auto;
+  }
+
+  .setup-screen > :last-child,
+  .records-screen > :last-child,
+  .detail-screen > :last-child,
+  .summary-screen > :last-child,
+  .session-screen > :last-child {
+    margin-bottom: auto;
   }
 
   .logo {
@@ -830,9 +849,9 @@
   }
 
   .av-stage {
-    flex: 1;
+    flex: none;
     min-height: 260px;
-    height: auto;
+    height: clamp(280px, 42vh, 410px);
     margin-bottom: 14px;
     border-radius: 18px;
   }
@@ -896,9 +915,9 @@
   }
 
   .sum-area {
-    flex: 1;
+    flex: none;
     min-height: 140px;
-    height: auto;
+    height: clamp(140px, 20vh, 190px);
     border-radius: 10px;
     font-size: 16px;
     padding: 16px;
@@ -920,9 +939,9 @@
   }
 
   .det-sum {
-    flex: 1;
+    flex: none;
     min-height: 120px;
-    height: auto;
+    height: clamp(140px, 20vh, 190px);
     border-radius: 14px;
     font-size: 17px;
     padding: 22px;
