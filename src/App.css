@@ -161,6 +161,11 @@
   gap: 12px;
 }
 
+.records-screen.has-pagination .rec-grid {
+  height: 306px;
+  overflow-y: auto;
+}
+
 .rec-card {
   min-width: 0;
   border: 1px solid #f1dfcf;
@@ -716,6 +721,12 @@
     max-height: calc(100% - 150px);
     overflow-y: auto;
     padding: 2px 4px 4px 0;
+  }
+
+  .records-screen.has-pagination .rec-grid {
+    width: 100%;
+    height: min(248px, calc(100% - 150px));
+    min-height: 112px;
   }
 
   .rec-card {

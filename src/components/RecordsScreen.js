@@ -7,6 +7,7 @@ function RecordsScreen({ records, onBack, onSelectRecord }) {
   const [page, setPage] = useState(1);
   const allRecords = useMemo(() => records.slice().reverse(), [records]);
   const pageCount = Math.max(1, Math.ceil(allRecords.length / RECORDS_PER_PAGE));
+  const hasPagination = allRecords.length > RECORDS_PER_PAGE;
   const pageRecords = useMemo(() => {
     const start = (page - 1) * RECORDS_PER_PAGE;
 
@@ -24,7 +25,10 @@ function RecordsScreen({ records, onBack, onSelectRecord }) {
   };
 
   return (
-    <section className="screen records-screen" aria-labelledby="records-title">
+    <section
+      className={`screen records-screen ${hasPagination ? 'has-pagination' : ''}`}
+      aria-labelledby="records-title"
+    >
       <button className="back-btn" type="button" onClick={onBack}>
         ← 홈으로
       </button>
@@ -39,7 +43,7 @@ function RecordsScreen({ records, onBack, onSelectRecord }) {
         onSelect={onSelectRecord}
         emptyMessage="학습 기록이 없어요."
       />
-      {allRecords.length > RECORDS_PER_PAGE && (
+      {hasPagination && (
         <nav className="pagination" aria-label="학습 기록 페이지">
           <button
             className="page-btn"
