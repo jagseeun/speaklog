@@ -6,11 +6,6 @@
 
 데모 영상: [Speaklog_데모영상.mp4](Speaklog_데모영상.mp4)
 
-## 발표 자료
-
-- [발표 흐름](presentation_flow.md): 5분/10분 발표 구성, 시연 순서, 예상 질문 답변
-- [발표 노트](presentation_notes.md): 발표 원고와 핵심 코드 설명 정리
-
 ## 주요 기능
 
 - 설명할 학습 주제 입력
